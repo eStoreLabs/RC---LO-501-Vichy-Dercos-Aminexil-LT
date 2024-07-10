@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="et">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decros</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @font-face {
+        font-family: 'LeagueSpartan';
+        src: url('assets/fonts/LeagueSpartan-Regular.ttf');
+        font-style: normal;
+      }
+
+      #es-decros.es-decros {
+        font-family: 'LeagueSpartan', Tahoma, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.2;
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 0;
+        overflow: hidden;
+        color: #000;
+        background: #fff;
+      }
+
+      #es-decros.es-decros html,
+      #es-decros.es-decros body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #es-decros.es-decros sup {
+        vertical-align: top;
+        font-size: 0.5em;
+        line-height: inherit;
+      }
+
+      #es-decros.es-decros h2,
+      #es-decros.es-decros h3,
+      #es-decros.es-decros h4,
+      #es-decros.es-decros h5 {
+        font-family: 'LeagueSpartan', Tahoma, Verdana, sans-serif;
+        color: #000;
+      }
+
+      #es-decros.es-decros * {
+        box-sizing: border-box;
+      }
+
+      #es-decros.es-decros .es-kv {
+        margin-bottom: 48px;
+      }
+
+      #es-decros.es-decros .es-kv__img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        padding: 20px 0 60px 50px;
+      }
+
+      #es-decros.es-decros .es-kv__left {
+        background: url(assets/img/kv-photo.png) right no-repeat;
+        background-size: cover;
+        min-height: 573px;
+      }
+
+      #es-decros.es-decros .es-kv__span {
+        color: #e22120;
+      }
+
+      #es-decros.es-decros .es-kv__span--percent {
+        font-size: 64px;
+      }
+
+      #es-decros.es-decros .es-kv__span--right {
+        color: #000;
+        font-size: 18px;
+      }
+
+      #es-decros.es-decros .es-kv__text {
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        font-size: 32px;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-align: left;
+        padding-left: 40px;
+        margin-bottom: 32px;
+      }
+
+      #es-decros.es-decros .es-kv__title {
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        color: #fff;
+        font-size: 32px;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-align: left;
+        padding-left: 5%;
+      }
+
+      #es-decros.es-decros .es-kv__subtitle {
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        color: #fff;
+        font-size: 24px;
+        text-transform: uppercase;
+        text-align: left;
+        font-weight: 400;
+        margin-bottom: 24px;
+        padding-top: 24px;
+        padding-left: 5%;
+      }
+
+      #es-decros.es-decros .es-kv__content {
+        flex: 1;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #es-decros.es-decros .es-serum {
+        padding: 16px;
+        margin-bottom: 11px;
+      }
+
+      #es-decros.es-decros .es-serum__title {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 24px;
+        margin-bottom: 32px;
+        text-align: center;
+        max-width: 700px;
+        margin-inline: auto;
+      }
+
+      #es-decros.es-decros .es-serum__subtitle {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 32px;
+        text-align: center;
+        max-width: 850px;
+        margin-inline: auto;
+      }
+
+      #es-decros.es-decros .es-serum__disclaimer {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-weight: 300;
+        font-size: 10px;
+        text-align: center;
+      }
+
+      #es-decros.es-decros .es-serum__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        margin-top: 42px;
+        justify-content: center;
+        align-items: center;
+        gap: 26px;
+        margin-bottom: 24px;
+      }
+
+      #es-decros.es-decros .es-serum__feature {
+        width: 160px;
+      }
+
+      #es-decros.es-decros .es-serum__feature:hover .es-serum__icon {
+        transform: scale(1.2);
+      }
+
+      #es-decros.es-decros .es-serum__icon {
+        flex: 1;
+        transition: transform 0.3s ease;
+      }
+
+      #es-decros.es-decros .es-serum__img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      #es-decros.es-decros .es-serum__text {
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        flex: 2;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 600;
+        margin: 16px 0;
+        margin-bottom: 0;
+      }
+
+      #es-decros.es-decros .es-bottle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+      }
+
+      #es-decros.es-decros .es-bottle__list {
+        margin: 0;
+        padding: 0;
+        padding-left: 16px;
+        list-style-image: url(assets/img/dot.png);
+      }
+
+      #es-decros.es-decros .es-bottle__item {
+        padding: 0;
+        margin: 0 0 16px;
+        color: #000;
+        line-height: inherit;
+        font-family: inherit;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      #es-decros.es-decros .es-bottle__title {
+        margin: 0;
+        line-height: inherit;
+        color: #000;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: left;
+        padding: 20px 0;
+      }
+
+      #es-decros.es-decros .es-bottle__img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      #es-decros.es-decros .es-bottle__content {
+        padding: 0 16px;
+        max-width: 400px;
+      }
+
+      #es-decros.es-decros .es-res {
+        margin-bottom: 40px;
+      }
+
+      #es-decros.es-decros .es-res__title {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+
+      #es-decros.es-decros .es-res__wrapper {
+        background: rgb(170, 26, 24);
+        background: linear-gradient(
+          90deg,
+          rgba(170, 26, 24, 1) 0%,
+          rgba(215, 36, 30, 1) 100%
+        );
+        padding: 32px 16px;
+      }
+
+      #es-decros.es-decros .es-res__subtitle {
+        padding: 0;
+        line-height: 1.2;
+        color: inherit;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 300;
+        margin: 0 auto;
+        margin-bottom: 24px;
+        text-align: center;
+      }
+
+      #es-decros.es-decros .es-res__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      #es-decros.es-decros .es-res__week {
+        margin: 0;
+        padding: 0;
+        font-weight: 600;
+        font-size: 32px;
+        color: #fff;
+        text-align: center;
+        line-height: 1;
+        white-space: nowrap;
+      }
+
+      #es-decros.es-decros .es-res__text {
+        margin: 0;
+        line-height: inherit;
+        font-size: 12px;
+        text-align: center;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+      #es-decros.es-decros .es-res__disc {
+        margin: 0;
+        line-height: inherit;
+        color: inherit;
+        font-size: 10px;
+        padding: 16px;
+        text-align: center;
+      }
+
+      #es-decros.es-decros .es-res__disclaimer {
+        margin: 0;
+        line-height: inherit;
+        color: inherit;
+        padding: 24px 16px 0 16px;
+        font-size: 10px;
+        font-weight: 300;
+        text-align: left;
+      }
+
+      #es-decros.es-decros .es-ingredients {
+        margin: 0 auto;
+        padding: 0 16px;
+        margin-bottom: 40px;
+      }
+
+      #es-decros.es-decros .es-ingredients__title {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 32px;
+        margin-bottom: 32px;
+        text-align: center;
+      }
+
+      #es-decros.es-decros .es-ingredients__container .es-ingredients__single {
+        opacity: 1;
+      }
+
+      #es-decros.es-decros
+        .es-ingredients__container:hover
+        .es-ingredients__single {
+        opacity: 0.5;
+      }
+
+      #es-decros.es-decros
+        .es-ingredients__container
+        .es-ingredients__single:hover {
+        opacity: 1;
+      }
+
+      #es-decros.es-decros .es-ingredients__container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px 5px;
+        justify-content: center;
+      }
+
+      #es-decros.es-decros .es-ingredients__single {
+        flex: 1;
+        flex-basis: 100%;
+        max-width: 197px;
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
+      }
+
+      #es-decros.es-decros .es-ingredients__image {
+        position: relative;
+      }
+
+      #es-decros.es-decros .es-ingredients__img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      #es-decros.es-decros .es-ingredients__text {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        padding-top: 16px;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 500;
+      }
+
+      #es-decros.es-decros .es-hand {
+        margin-bottom: 32px;
+      }
+
+      #es-decros.es-decros .es-hand__title {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 32px;
+        margin-bottom: 32px;
+        text-align: center;
+      }
+
+      #es-decros.es-decros .es-hand__subtitle {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-size: 12px;
+        font-weight: 200;
+        text-align: center;
+      }
+
+      #es-decros.es-decros .es-hand__disclaimer {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-size: 8px;
+        text-align: center;
+      }
+
+      #es-decros.es-decros .es-hand__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        margin-top: 42px;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 26px;
+      }
+
+      #es-decros.es-decros .es-hand__feature {
+        width: 140px;
+      }
+
+      #es-decros.es-decros .es-hand__feature:hover .es-hand__icon {
+        transform: scale(1.2);
+      }
+
+      #es-decros.es-decros .es-hand__icon {
+        flex: 1;
+        transition: transform 0.3s ease;
+      }
+
+      #es-decros.es-decros .es-hand__img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      #es-decros.es-decros .es-hand__text {
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        flex: 2;
+        font-size: 12px;
+        text-align: center;
+        font-weight: 300;
+        margin: 16px 0;
+        margin-bottom: 0;
+      }
+
+      #es-decros.es-decros .es-use {
+        margin-bottom: 56px;
+      }
+
+      #es-decros.es-decros .es-use__wrapper {
+        background: rgb(170, 26, 24);
+        background: linear-gradient(
+          90deg,
+          rgba(170, 26, 24, 1) 0%,
+          rgba(215, 36, 30, 1) 100%
+        );
+        padding: 32px;
+      }
+
+      #es-decros.es-decros .es-use__title {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        font-size: 22px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 24px;
+      }
+
+      #es-decros.es-decros .es-use__list {
+        margin: 0;
+        padding: 0;
+        padding-left: 16px;
+      }
+
+      #es-decros.es-decros .es-use__item {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 16px;
+        color: #fff;
+      }
+
+      #es-decros.es-decros .es-use__text {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        font-size: 16px;
+        font-weight: 200;
+        margin-bottom: 16px;
+        color: #fff;
+      }
+
+      #es-decros.es-decros .es-routine__title {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-size: 32px;
+        font-weight: 200;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 16px;
+        position: relative;
+        z-index: 1;
+      }
+
+      #es-decros.es-decros .es-routine__container {
+        padding: 16px;
+      }
+
+      #es-decros.es-decros .es-routine__single {
+        margin-bottom: 64px;
+        display: flex;
+        flex-direction: column;
+        max-width: 320px;
+        align-items: center;
+        margin-inline: auto;
+      }
+
+      #es-decros.es-decros .es-routine__subtitle {
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-size: 20px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin: 12px 0;
+        text-align: center;
+        min-height: 80px;
+      }
+
+      #es-decros.es-decros .es-routine__text {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-size: 15px;
+        font-weight: 300;
+        margin-bottom: 24px;
+        text-align: center;
+        max-width: 200px;
+        min-height: 90px;
+      }
+
+      #es-decros.es-decros .es-routine__link {
+        margin: 0;
+        line-height: inherit;
+        font-size: 15px;
+        text-decoration: none;
+        color: #fff;
+        background: #e22720;
+        padding: 8px 32px;
+        border: 1px solid #e22720;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+      }
+
+      #es-decros.es-decros .es-routine__link:hover {
+        color: #e22720;
+        background: #fff;
+      }
+
+      #es-decros.es-decros .es-routine__img-packshot {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+
+      #es-decros.es-decros .es-routine__packshot {
+        margin-bottom: 32px;
+      }
+
+      #es-decros.es-decros .es-disclaimer {
+        margin-bottom: 32px;
+      }
+
+      #es-decros.es-decros .es-disclaimer__text {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-size: 12px;
+        font-weight: 300;
+        text-align: center;
+      }
+
+      #es-decros.es-decros .es-routine__cross {
+        display: none;
+      }
+
+      @media screen and (min-width: 789px) {
+        #es-decros.es-decros .es-kv__text {
+          margin-bottom: 0;
+          padding-left: 30px;
+          margin-top: -50px;
+        }
+
+        #es-decros.es-decros .es-kv {
+          display: flex;
+          flex-direction: row-reverse;
+        }
+
+        #es-decros.es-decros .es-kv__left {
+          width: 50%;
+        }
+
+        #es-decros.es-decros .es-kv__right {
+          width: 50%;
+        }
+
+        #es-decros.es-decros .es-serum__container {
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: flex-start;
+          max-width: 800px;
+          gap: unset;
+        }
+
+        #es-decros.es-decros .es-bottle {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
+
+        #es-decros.es-decros .es-res {
+          background: url('assets/img/photo-2.png') no-repeat 148% top;
+          margin-bottom: 64px;
+          padding: 48px 0;
+        }
+
+        #es-decros.es-decros .es-res__wrapper {
+          background: rgb(170, 26, 24);
+          background: linear-gradient(
+            90deg,
+            rgba(170, 26, 24, 1) 0%,
+            rgba(215, 36, 30, 1) 100%
+          );
+          max-width: 55%;
+        }
+
+        #es-decros.es-decros .es-res__single {
+          max-width: 133px;
+        }
+
+        #es-decros.es-decros .es-res__disclaimer {
+          margin: 0 auto;
+        }
+
+        #es-decros.es-decros .es-ingredients {
+          padding: 0;
+          margin-bottom: 60px;
+        }
+
+        #es-decros.es-decros .es-ingredients__container {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+        }
+
+        #es-decros.es-decros .es-use {
+          background: url('assets/img/photo-3.png') no-repeat -68% top;
+          margin-bottom: 64px;
+          padding: 80px 0;
+          min-height: 582px;
+        }
+
+        #es-decros.es-decros .es-use__title {
+          font-size: 22px;
+          padding: 0;
+          font-weight: 500;
+        }
+
+        #es-decros.es-decros .es-use__wrapper {
+          background: rgb(170, 26, 24);
+          background: linear-gradient(
+            90deg,
+            rgba(170, 26, 24, 1) 0%,
+            rgba(215, 36, 30, 1) 100%
+          );
+          max-width: 44%;
+          margin-left: auto;
+        }
+
+        #es-decros.es-decros .es-use__content {
+          padding-left: 16px;
+          max-width: 90%;
+        }
+
+        #es-decros.es-decros .es-use__item:last-child {
+          margin-bottom: 0;
+        }
+
+        #es-decros.es-decros .es-routine {
+          margin-bottom: 40px;
+        }
+
+        #es-decros.es-decros .es-routine__img {
+          display: block;
+          -o-object-fit: cover;
+          object-fit: cover;
+          max-width: 110%;
+        }
+
+        #es-decros.es-decros .es-routine__container {
+          padding: 0;
+          position: relative;
+          display: flex;
+          justify-content: center;
+        }
+
+        #es-decros.es-decros .es-res__week {
+          font-size: 48px;
+        }
+
+        #es-decros.es-decros .es-res__text {
+          font-size: 18px;
+        }
+
+        #es-decros.es-decros .es-res__container {
+          flex-direction: row;
+          justify-content: center;
+          align-items: flex-start;
+        }
+
+        #es-decros.es-decros .es-kv__photo {
+          max-width: 500px;
+        }
+
+        #es-decros.es-decros .es-routine__packshot {
+          display: none;
+        }
+
+        #es-decros.es-decros .es-routine__cross {
+          display: block;
+          margin-bottom: 32px;
+          max-width: 100%;
+          padding: 20px;
+        }
+
+        #es-decros.es-decros .es-hand__wrapper {
+          max-width: 444px;
+          padding-top: 190px;
+          margin-left: 7%;
+        }
+
+        #es-decros.es-decros .es-hand__container {
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: flex-start;
+          max-width: 800px;
+          gap: unset;
+        }
+
+        #es-decros.es-decros .es-hand {
+          background: url('assets/img/hand.png');
+          min-height: 772px;
+          margin-bottom: -50px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="es-decros" id="es-decros">
+      <div class="es-kv">
+        <div class="es-kv__right">
+          <div class="es-kv__photo">
+            <img src="assets/img/red.png" alt="" class="es-kv__img" />
+          </div>
+          <div class="es-kv__text">
+            <span class="es-kv__span es-kv__span--right"
+              >aminexil clinical 5</span
+            >
+            <br />
+            <strong>PRIEMONĖ </strong><br />
+            <strong>NUO PLAUKŲ SLINKIMO</strong>
+          </div>
+        </div>
+        <div class="es-kv__left">
+          <div class="es-kv__subtitle">
+            VEIKSMINGUMAS<br />
+            PATVIRTINTAS<br />
+            KLINIKINIAIS TYRIMAIS<br />
+          </div>
+          <div class="es-kv__title">
+            SUMAŽINA<br />
+            PLAUKŲ SLINKIMĄ<br />
+            <span class="es-kv__span">
+              <span class="es-kv__span--percent">29%</span><sup>(1)</sup>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="es-serum">
+        <p class="es-serum__title">
+          <strong>DAUGIAU NEI 50 % GYVENTOJŲ KENČIA DĖL PLIKIMO,</strong><br />
+          O 52 % VYRŲ IR 60 % MOTERŲ EUROPOJE BAIMINASI DĖL <br />
+          ANKSTYVO PLAUKŲ SLINKIMO<sup>(2)</sup>.
+        </p>
+        <p class="es-serum__subtitle">
+          Atraskite daugiafunkcinę kompleksinę priemonę nuo plaukų slinkimo
+          <br />
+          <strong>DERCOS Aminexil Clinical 5 – FORMULĖ MOTERIMS,</strong>sukurtą
+          kartu su mūsų dermatologais, padedančią kovoti su pasikartojančiu ar
+          nuolatiniu plaukų slinkimu, taip pat ir atsiradusiu dėl streso bei
+          nuovargio.
+        </p>
+        <p class="es-serum__subtitle">
+          Unikalus nuo plaukų slinkimo apsaugančios medžiagos „Aminexil“ derinys
+          su 5 veikliosiomis medžiagomis užtikrina efektyvų poveikį nuo plaukų
+          šaknų iki pat jų galiukų.
+        </p>
+        <div class="es-serum__container">
+          <div class="es-serum__feature">
+            <div class="es-serum__icon">
+              <img src="assets/img/check.png" alt="" class="es-serum__img" />
+            </div>
+            <p class="es-serum__text">
+              Klinikiniais tyrimais patvirtintas plaukų slinkimo sumažėjimas
+              29%<sup>(1) </sup>
+            </p>
+          </div>
+          <div class="es-serum__feature">
+            <div class="es-serum__icon">
+              <img src="assets/img/check.png" alt="" class="es-serum__img" />
+            </div>
+            <p class="es-serum__text">
+              Sustiprina plaukus nuo šaknų<sup>(3)</sup>
+            </p>
+          </div>
+          <div class="es-serum__feature">
+            <div class="es-serum__icon">
+              <img src="assets/img/check.png" alt="" class="es-serum__img" />
+            </div>
+            <p class="es-serum__text">
+              Padidina plaukų storį ir atsparumą<sup>(4)</sup>
+            </p>
+          </div>
+          <div class="es-serum__feature">
+            <div class="es-serum__icon">
+              <img src="assets/img/check.png" alt="" class="es-serum__img" />
+            </div>
+            <p class="es-serum__text">
+              Sumažina galvos odos sudirginimą ir subalansuoja pusiausvyros
+              sutrikimus<sup>(5)</sup>
+            </p>
+          </div>
+        </div>
+        <div class="es-serum__disclaimer">
+          <sup>(1)</sup>Aminexil Clinical 5 klinikinis tyrimas dalyvaujant 86
+          asmenims, po 6 savaičių naudojimo. <br />
+          <sup>(2)</sup>Šaltinis IPSOS 2003. Europoje atliktas tyrimas, kuriame
+          dalyvavo 30 000 asmenų. <br />
+          <sup>(3)</sup>Patvirtina 90 % Italijoje atlikto savęs įvertinimo
+          testo, kuriame dalyvavo 132 moterys ir 132 vyrai, naudojant vieną
+          kartą per dieną 6 savaites, dalyvių.
+          <br />
+          <sup>(4)</sup>Instrumentinis testas Energy+ šampūnas ir gydomoji
+          priemonė Aminexil Clinical 5. <br />
+          <sup>(5)</sup>Klinikinis tyrimas dalyvaujant 98 pacientams, po 3
+          savaičių naudojimo. <br />
+        </div>
+      </div>
+
+      <div class="es-bottle">
+        <div class="es-bottle__photo">
+          <img
+            src="assets/img/vichy-bottle.png"
+            alt=""
+            class="es-bottle__img"
+          />
+        </div>
+        <div class="es-bottle__content">
+          <h3 class="es-bottle__title">NAUDOKITE, JEI</h3>
+          <ul class="es-bottle__list">
+            <li class="es-bottle__item">
+              pasireiškia pasikartojantis arba nuolatinis plaukų slinkimas
+            </li>
+            <li class="es-bottle__item">plaukams trūksta apimties</li>
+            <li class="es-bottle__item">
+              plaukų slinkimą sukelia stresas ir nuovargis
+            </li>
+            <li class="es-bottle__item">plaukai lūžinėja</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="es-res">
+        <div class="es-res__wrapper">
+          <div class="es-res__content">
+            <h3 class="es-res__title">
+              <b>VEIKSMINGUMAS PATVIRTINTAS KLINIKINIAIS TYRIMAIS</b>
+            </h3>
+            <p class="es-res__subtitle">
+              Šampūnas puikiai papildo DERCOS AMINEXIL CLINICAL 5 priemonę
+              moterims ir vyrams. Naudojant Energy+ šampūną ir Aminexil Clinical
+              5 priemonę:
+            </p>
+            <div class="es-res__container">
+              <div class="es-res__single">
+                <p class="es-res__week">-29<sup>%</sup></p>
+                <p class="es-res__text">
+                  SUMAŽĖJA PLAUKŲ SLINKIMAS<sup>(1)</sup>
+                </p>
+              </div>
+              <div class="es-res__single">
+                <p class="es-res__week">+48<sup>%</sup></p>
+                <p class="es-res__text">
+                  PADIDĖJA PLAUKŲ APIMTIS<sup>(2)</sup>
+                </p>
+              </div>
+              <div class="es-res__single">
+                <p class="es-res__week">3<small>x</small></p>
+                <p class="es-res__text">STIPRESNI PLAUKAI<sup>(2)</sup></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="es-res__disclaimer">
+          <sup>(1)</sup> Aminexil Clinical 5 klinikinis tyrimas dalyvaujant 86
+          asmenims, po 6 savaičių naudojimo. <br />
+          <sup>(2)</sup> Instrumentinis testas Energy+ šampūnas ir gydomoji
+          priemonė Aminexil Clinical 5.
+        </p>
+      </div>
+
+      <div class="es-ingredients">
+        <h3 class="es-ingredients__title">
+          VEIKSMINGA FORMULĖ SU VEIKLIOSIOMIS MEDŽIAGOMIS
+        </h3>
+        <div class="es-ingredients__container">
+          <div class="es-ingredients__single">
+            <div class="es-ingredients__image">
+              <img
+                src="assets/img/ingr-1.png"
+                alt=""
+                class="es-ingredients__img"
+              />
+            </div>
+            <p class="es-ingredients__text">Stabdo plaukų slinkimą.</p>
+          </div>
+          <div class="es-ingredients__single">
+            <div class="es-ingredients__image">
+              <img
+                src="assets/img/ingr-2.png"
+                alt=""
+                class="es-ingredients__img"
+              />
+            </div>
+            <p class="es-ingredients__text">Stiprina plaukus.</p>
+          </div>
+          <div class="es-ingredients__single">
+            <div class="es-ingredients__image">
+              <img
+                src="assets/img/ingr-3.png"
+                alt=""
+                class="es-ingredients__img"
+              />
+            </div>
+            <p class="es-ingredients__text">Mažina galvos odos sudirginimą.</p>
+          </div>
+          <div class="es-ingredients__single">
+            <div class="es-ingredients__image">
+              <img
+                src="assets/img/ingr-4.png"
+                alt=""
+                class="es-ingredients__img"
+              />
+            </div>
+            <p class="es-ingredients__text">Stimuliuoja mikrocirkuliaciją.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="es-hand">
+        <div class="es-hand__wrapper">
+          <h3 class="es-hand__title">GERO TOLERAVIMO <br />GARANTIJA</h3>
+          <div class="es-hand__container">
+            <div class="es-hand__feature">
+              <div class="es-hand__icon">
+                <img src="assets/img/icon-1.png" alt="" class="es-hand__img" />
+              </div>
+              <p class="es-hand__text">
+                Hipoalerginė <br />
+                formulė
+              </p>
+            </div>
+            <div class="es-hand__feature">
+              <div class="es-hand__icon">
+                <img src="assets/img/icon-2.png" alt="" class="es-hand__img" />
+              </div>
+              <p class="es-hand__text">Išbandytas prižiūrint dermatologams</p>
+            </div>
+            <div class="es-hand__feature">
+              <div class="es-hand__icon">
+                <img src="assets/img/icon-3.png" alt="" class="es-hand__img" />
+              </div>
+              <p class="es-hand__text">
+                Išbandytas <br />naudojant jautriai <br />galvos odai
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="es-use">
+        <div class="es-use__wrapper">
+          <div class="es-use__content">
+            <h3 class="es-use__title">NAUDOJIMO BŪDAS</h3>
+            <ol class="es-use__list">
+              <li class="es-use__item">
+                <p class="es-use__text">
+                  Tepkite ant išplautų ir išdžiovintų arba rankšluosčiu
+                  nusausintų plaukų.
+                </p>
+              </li>
+              <li class="es-use__item">
+                <p class="es-use__text">
+                  Tepkite priemonę pereinant iš vieno ploto į kitą, masažuodami
+                  galvą aplikatoriumi zigzaginiais judesiais, kol bus padengta
+                  visa galvos oda. Nenuplaukite.
+                </p>
+              </li>
+            </ol>
+            <h3 class="es-use__title">NAUDOJIMAS</h3>
+            <p class="es-use__text">
+              3 mėnesių intensyvus priežiūra: <br />
+              1 ampulė per dieną ARBA palaikomoji <br />priežiūra: 3 ampulės per
+              savaitę.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="es-routine">
+        <h3 class="es-routine__title">
+          <strong>DERCOS PRIEŽIŪROS RUTINA NUO PLAUKŲ SLINKIMO</strong>
+        </h3>
+        <img src="assets/img/cross.png" alt="" class="es-routine__cross" />
+        <div class="es-routine__container">
+          <div class="es-routine__single es-routine__single--1">
+            <div class="es-routine__packshot">
+              <img
+                src="assets/img/cross-1.png"
+                alt=""
+                class="es-routine__img-packshot"
+              />
+            </div>
+            <p class="es-routine__subtitle">
+              <b>dercos energy+ </b><br />
+              STIPRINANTIS ŠAMPŪNAS
+            </p>
+            <p class="es-routine__text">
+              Stiprinantis šampūnas visų tipų plaukams, praturtintas „Aminexil“.
+              Sustiprina plaukus 47%<sup>(1)</sup>.
+            </p>
+            <a href="#" target="_blank" class="es-routine__link">tutvu</a>
+          </div>
+          <div class="es-routine__single es-routine__single--2">
+            <div class="es-routine__packshot">
+              <img
+                src="assets/img/cross-2.png"
+                alt=""
+                class="es-routine__img-packshot"
+              />
+            </div>
+            <p class="es-routine__subtitle">
+              <b>Dercos</b> <br />
+              STIPRINANTIS KONDICIONIERIUS
+            </p>
+            <p class="es-routine__text">
+              Sumažina plaukų lūžimą ir slinkimą bei palengvina šukavimą jų
+              neapkraunant. Plaukai tampa stipresni ir atsparesni.
+            </p>
+            <a href="#" target="_blank" class="es-routine__link">tutvu</a>
+          </div>
+          <div class="es-routine__single es-routine__single--3">
+            <div class="es-routine__packshot">
+              <img
+                src="assets/img/cross-3.png"
+                alt=""
+                class="es-routine__img-packshot"
+              />
+            </div>
+            <p class="es-routine__subtitle">
+              <b>DERCOS&nbsp;AMINEXIL&nbsp;CLINICAL&nbsp;5</b> <br />
+              KOMPLEKSINĖ PRIEMONĖ
+            </p>
+            <p class="es-routine__text">
+              Daugiafunkcinė kompleksinė priemonė nuo plaukų slinkimo Sumažina
+              plaukų slinkimą 29%<sup>(2)</sup>.
+            </p>
+            <a
+              href="https://www.benu.ee/products-by-categories/beauty-and-skin-care/sun-care-ee/vichy-aminexil-pro-juuste-vljalangemise-vastane-intensiivhooldus-naistele-21x6ml"
+              target="_blank"
+              class="es-routine__link"
+              >tutvu</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="es-disclaimer">
+        <p class="es-disclaimer__text">
+          <sup>(1)</sup> Testas aparatine įranga po 5 naudojimo kartų. <br />
+          <sup>(2)</sup> Aminexil Clinical 5 klinikinis tyrimas dalyvaujant 86
+          asmenims, po 6 savaičių naudojimo.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
